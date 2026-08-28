@@ -34,7 +34,17 @@ def apply_shot(state, cell):
 
 def generate_legal_shots(state):
     legal_shots = []
-    for cell in BOARD_CELL:
+    for cell in BOARD_CELLS:
         if cell not in state["shots"]:
             legal_shots.append(cell)
     return legal_shots
+
+def apply(state, cell):
+    if cell in state["shots"]:
+        raise ValueError("Already fired at this cell")
+    
+    if cell not in BOARD_CELLS:
+        raise ValueError("Cell is off the board")
+    
+    state["shots"].append(cell)
+    hit_ship = None
