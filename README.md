@@ -11,7 +11,7 @@ This project handles the core game logic for a game of Battleship. It processes 
 To run the tests and verify the game logic, run the following command in your terminal:
 
 <p align="center">
-  <img src="(https://github.com/thatoHQ/bootcamp-group-projects/blob/main/tests1.png) alt="Alt text" width="400">
+  <img src="./tests1.png" alt="Tests screenshot" width="600">
 </p>
 
 ```bash
