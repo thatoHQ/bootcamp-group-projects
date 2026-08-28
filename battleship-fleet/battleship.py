@@ -31,3 +31,10 @@ def generate_legal_shots(state):
 
 def apply_shot(state, cell):
     raise NotImplementedError("This function is not implemented yet.")
+
+def generate_legal_shots(state):
+    legal_shots = []
+    for cell in BOARD_CELL:
+        if cell not in state["shots"]:
+            legal_shots.append(cell)
+    return legal_shots
