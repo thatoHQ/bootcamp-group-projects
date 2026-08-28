@@ -41,3 +41,25 @@ def apply(state, cell):
     
     state["shots"].append(cell)
     hit_ship = None
+
+
+    for ship_name in state["ships"]:
+        if cell in state["ships"][ship_name]:
+            hit_ship = ship_name
+            break # Stop searching once we find the hit ship
+
+    
+    if hit_ship is None:
+        result = "miss"
+    else:
+        is_sunk = True
+        for c in state["ships"][hit_ship]:
+            if c not in state["shots"]:
+                is_sunk = False
+                break 
+
+        if is_sunk:
+            result = "sunk:" + hit_ship
+        else:
+            result = "hit"
+
