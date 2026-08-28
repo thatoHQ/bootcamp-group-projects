@@ -5,6 +5,11 @@ Thato Mashifana / Nhluvuko Mlambu / Thabiso Mashifana / Tumelo Mawayi / Harry Mo
 ## Overview
 This project handles the core game logic for a game of Battleship. It processes the state of the board, calculates valid moves, and evaluates the outcome of every shot fired.
 
+### Flowchart Diagram
+<p align="center">
+  <img src="./Flowchart%20Diagram%20by%20Tumelo%20Mawayi.jpg" alt="Flowchart Diagram by Tumelo Veli Mawayi" width="800">
+</p>
+
 ## Core Game Logic `battleship.py`
 
 ### How to Run the Tests
@@ -16,3 +21,5 @@ To run the tests and verify the game logic, run the following command in your te
 
 ```bash
 python -m unittest test_battleship.py
+
+
