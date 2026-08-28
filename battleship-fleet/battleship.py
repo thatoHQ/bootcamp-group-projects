@@ -12,6 +12,7 @@ FLEET = {
 }
 
 
+
 def parse_state(text):
     ships_str, shots_str = [part.strip() for part in text.split("|")]
 
@@ -22,15 +23,7 @@ def parse_state(text):
 
     shots = [cell.strip() for cell in shots_str.split(",") if cell.strip()]
 
-    return ...
-
-
-def generate_legal_shots(state):
-    raise NotImplementedError("This function is not implemented yet.")
-
-
-def apply_shot(state, cell):
-    raise NotImplementedError("This function is not implemented yet.")
+    return {"ships": ships, "shots": shots}
 
 def generate_legal_shots(state):
     legal_shots = []
