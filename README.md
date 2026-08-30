@@ -5,6 +5,12 @@ Thato Mashifana / Nhluvuko Mlambu / Thabiso Mashifana / Tumelo Mawayi / Harry Mo
 ## Overview
 This project handles the core game logic for a game of Battleship. It processes the state of the board, calculates valid moves, and evaluates the outcome of every shot fired.
 
+## Game
+<p align="center">
+  <img src="./image.png" alt="Game" width="800">
+</p>
+
+
 ### Flowchart Diagram
 <p align="center">
   <img src="./Flowchart%20Diagram%20by%20Tumelo%20Mawayi.jpg" alt="Flowchart Diagram by Tumelo Veli Mawayi" width="800">
