@@ -16,7 +16,20 @@ This project handles the core game logic for a game of Battleship. It processes 
   <img src="./Flowchart%20Diagram%20by%20Tumelo%20Mawayi.jpg" alt="Flowchart Diagram by Tumelo Veli Mawayi" width="800">
 </p>
 
+TeamWork and Contributions:
+
+Team Lead: Tumelo Mawayi
+Co-Lead: Thato Mashifana
+GitHub Collab: Thato Mashifana, Harry Mofoka and Thabiso Mashifana
+Program Logic Lead: Harry Mofoka and Nhlovuko Mlandu
+
 ## Core Game Logic `battleship.py`
+
+Thabiso Mashifana: Game Logic and Implementation
+Tumelo Mawayi: Data Flow Chart (Pre Code)
+Thato Mashifana: Parse State and Testing
+Harry Mofoka: Shots Fired State Checker Functions
+Nhlvuko Mlandu: Game State Checker Functions
 
 ### How to Run the Tests
 To run the tests and verify the game logic, run the following command in your terminal:
@@ -27,5 +40,6 @@ To run the tests and verify the game logic, run the following command in your te
 
 ```bash
 python -m unittest test_battleship.py
+python battleship.py
 
 
