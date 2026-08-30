@@ -23,9 +23,6 @@ def parse_state(text):
     shots = [cell.strip() for cell in shots_str.split(",") if cell.strip()]
 
     return {"ships": ships, "shots": shots}
-
-
-
 ##Tumelo
 
 def generate_legal_shots(state):
@@ -34,10 +31,6 @@ def generate_legal_shots(state):
         if cell not in state["shots"]:
             legal_shots.append(cell)
     return legal_shots
-
-
-
-
 ##Harry
 def apply_shot(state, cell):
     if cell in state["shots"]:
@@ -47,8 +40,6 @@ def apply_shot(state, cell):
 
     state["shots"].append(cell)
     hit_ship = None
-
-
 #Nhluvuko
     for ship_name in state["ships"]:
         if cell in state["ships"][ship_name]:
@@ -69,11 +60,6 @@ def apply_shot(state, cell):
             result = "sunk:" + hit_ship
         else:
             result = "hit"
-
-
-
-
-
     # Thabiso
     fleet_defeated = True
     for ship_name in state["ships"]:
@@ -87,3 +73,46 @@ def apply_shot(state, cell):
         "fleet_defeated": fleet_defeated
     }
 
+def print_welcome_banner():
+    print("========================================")
+    print("           B A T T L E S H I P          ")
+    print("========================================")
+    print("")
+
+def print_board(state):
+    print("    A B C D E F G H I J")
+    print("  +---------------------")
+    
+    row = 1
+    while row <= 10:
+        
+        row_string = ""
+        if row < 10:
+            row_string = row_string + " " + str(row) + "| "
+        else:
+            row_string = row_string + str(row) + "| "
+        columns = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+        for col in columns:
+            cell = col + str(row)        
+    print("")
+
+def print_summary(state):
+    total_shots = 0
+    for shot in state["shots"]:
+        total_shots = total_shots + 1
+        
+    print("--- BATTLESHIP RADAR ---")
+    print("Total Shots Fired: " + str(total_shots))
+    print("------------------------")
+    print("")
+
+if __name__ == "__main__":
+    print_welcome_banner()
+    
+    test_state_string = "carrier:A1,A2,A3,A4,A5;destroyer:C5,C6 | A1,B7,C5,J10"
+    print("Loading test state: " + test_state_string)
+    print("")
+    parsed_state = parse_state(test_state_string)
+    
+    print_summary(parsed_state)
+    print_board(parsed_state)
